@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Macacos Evoluídos Esports - equipe de Valorant e League of Legends.">
+    <title>Macacos Evoluídos | Esports</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-me bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+                    <img src="images/logo.svg" alt="Logo Macacos Evoluídos" width="42" height="42">
+                    MACACOS EVOLUÍDOS
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <span class="badge rounded-pill text-bg-warning mb-3">ESPORTS • 2026</span>
+                        <h1>Do servidor para o topo.</h1>
+                        <p class="lead">Os Macacos Evoluídos são uma organização de esports criada para competir em alto nível no <strong>Valorant</strong> e no <strong>League of Legends</strong>.</p>
+                        <p class="hero-subtext">Talento, estratégia e Aura de caos competitivo.</p>
+                        <div class="d-flex flex-wrap gap-2 mt-4">
+                            <a href="sobre.html" class="btn btn-warning btn-lg fw-bold">Conheça a equipe</a>
+                            <a href="contato.html" class="btn btn-outline-light btn-lg">Fale conosco</a>
+                        </div>
+                    </div>
+                    <div class="hero-art" aria-label="Ilustração da equipe">
+                        <img src="images/hero-monkey.svg" alt="Ilustração estilizada de um macaco gamer">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-light" id="destaques">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <p class="section-kicker">MOMENTOS HISTÓRICOS</p>
+                    <h2 class="fw-bold">Grandes vitórias</h2>
+                    <p class="text-secondary">Uma seleção dos títulos que colocaram os Macacos no mapa.</p>
+                </div>
+
+                <div id="carrosselVitorias" class="carousel slide shadow-sm rounded-4 overflow-hidden" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carrosselVitorias" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Vitória 1"></button>
+                        <button type="button" data-bs-target="#carrosselVitorias" data-bs-slide-to="1" aria-label="Vitória 2"></button>
+                        <button type="button" data-bs-target="#carrosselVitorias" data-bs-slide-to="2" aria-label="Vitória 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/carousel-valorant.svg" class="d-block w-100" alt="Arte da campanha vitoriosa de Valorant">
+                            <div class="carousel-caption d-block text-start">
+                                <span class="badge text-bg-warning">VALORANT</span>
+                                <h3>Campeões do Champions Lisboa 2026</h3>
+                                <p>Virada histórica por 3–2 na grande final, com 139 abates de Koba na série.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/carousel-lol.svg" class="d-block w-100" alt="Arte da campanha vitoriosa de League of Legends">
+                            <div class="carousel-caption d-block text-start">
+                                <span class="badge text-bg-warning">LEAGUE OF LEGENDS</span>
+                                <h3>Campeões do MSI 2026</h3>
+                                <p>Uma final dominante por 3–1 colocou a line-up de LoL como campeã da temporada.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/carousel-dupla.svg" class="d-block w-100" alt="Arte dos dois elencos da organização">
+                            <div class="carousel-caption d-block text-start">
+                                <span class="badge text-bg-warning">ORGANIZAÇÃO</span>
+                                <h3>Dupla coroa dos Macacos</h3>
+                                <p>Na nossa história, 2026 ficou marcado por duas finais e dois troféus levantados.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carrosselVitorias" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carrosselVitorias" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Próximo</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <article class="col-md-6">
+                        <div class="info-panel h-100">
+                            <div class="icon-box">⌁</div>
+                            <h3>Valorant</h3>
+                            <p>Um elenco agressivo e disciplinado, conhecido por adaptações rápidas e retakes improváveis.</p>
+                            <a href="sobre.html#valorant" class="link-warning fw-bold">Ver jogadores →</a>
+                        </div>
+                    </article>
+                    <article class="col-md-6">
+                        <div class="info-panel h-100">
+                            <div class="icon-box">◆</div>
+                            <h3>League of Legends</h3>
+                            <p>Macro-jogo, team fights precisas e uma bot lane que adora transformar vantagens pequenas em vitórias.</p>
+                            <a href="sobre.html#lol" class="link-warning fw-bold">Ver jogadores →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-dark py-4">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+            <p class="mb-0">© 2026 Macacos Evoluídos Esports. Projeto acadêmico fictício.</p>
+            <p class="mb-0 text-secondary">Valorant • LoL • Competição</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
