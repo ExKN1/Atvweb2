@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Contato | Macacos Evoluídos{% endblock %}
+
+{% block content %}
+<main class="page-main">
+<section class="page-heading py-5">
+<div class="container">
+<p class="section-kicker">FALE COM A ORGANIZAÇÃO</p>
+<h1 class="fw-bold">Contato</h1>
+<p class="lead mb-0">Quer mandar uma mensagem, falar sobre parcerias ou tentar entrar para o elenco? Envie seu contato.</p>
+</div>
+</section>
+<section class="py-5">
+<div class="container">
+<div class="row g-5 justify-content-center">
+<div class="col-lg-7">
+<div class="card border-0 shadow-sm rounded-4">
+<div class="card-body p-4 p-md-5">
+<h2 class="h4 fw-bold mb-4">Envie uma mensagem</h2>
+<form>
+<div class="mb-3">
+<label class="form-label" for="email">E-mail</label>
+<input class="form-control" id="email" placeholder="seuemail@email.com" required="" type="email"/>
+</div>
+<div class="mb-3">
+<label class="form-label" for="assunto">Assunto</label>
+<select class="form-select" id="assunto">
+<option selected="">Escolha um assunto</option>
+<option>Parceria</option>
+<option>Imprensa</option>
+<option>Fã da equipe</option>
+<option>Recrutamento</option>
+</select>
+</div>
+<div class="mb-4">
+<label class="form-label" for="mensagem">Descrição</label>
+<textarea class="form-control" id="mensagem" placeholder="Escreva sua mensagem..." rows="6"></textarea>
+</div>
+<div class="d-flex flex-column flex-sm-row gap-2">
+<button class="btn btn-warning fw-bold px-4" type="submit">Enviar mensagem</button>
+<button class="btn btn-dark px-4" data-bs-target="#modalTrabalheConosco" data-bs-toggle="modal" type="button">Trabalhe Connosco</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<aside class="col-lg-4">
+<div class="contact-side h-100">
+<h2 class="h4 fw-bold">Canais</h2>
+<p class="text-secondary">Projeto acadêmico fictício. As informações abaixo são apenas ilustrativas.</p>
+<div class="contact-item"><strong>E-mail</strong><span>contato@macacosevoluidos.gg</span></div>
+<div class="contact-item"><strong>Discord</strong><span>/macacosevoluidos</span></div>
+<div class="contact-item"><strong>Horário</strong><span>Seg–Sex • 09h às 18h</span></div>
+</div>
+</aside>
+</div>
+</div>
+</section>
+</main>
+{% endblock %}
