@@ -18,30 +18,32 @@
 <div class="card border-0 shadow-sm rounded-4">
 <div class="card-body p-4 p-md-5">
 <h2 class="h4 fw-bold mb-4">Envie uma mensagem</h2>
-<form>
+
+<form action="{{ url_for('cadastro') }}" method="POST">
 <div class="mb-3">
 <label class="form-label" for="email">E-mail</label>
-<input class="form-control" id="email" placeholder="seuemail@email.com" required="" type="email"/>
+<input class="form-control" id="email" name="email" placeholder="seuemail@email.com" required="" type="email"/>
 </div>
 <div class="mb-3">
 <label class="form-label" for="assunto">Assunto</label>
-<select class="form-select" id="assunto">
-<option selected="">Escolha um assunto</option>
-<option>Parceria</option>
-<option>Imprensa</option>
-<option>Fã da equipe</option>
-<option>Recrutamento</option>
+<select class="form-select" id="assunto" name="assunto" required>
+<option value="" disabled selected>Escolha um assunto</option>
+<option value="Parceria">Parceria</option>
+<option value="Imprensa">Imprensa</option>
+<option value="Fã da equipe">Fã da equipe</option>
+<option value="Recrutamento">Recrutamento</option>
 </select>
 </div>
 <div class="mb-4">
 <label class="form-label" for="mensagem">Descrição</label>
-<textarea class="form-control" id="mensagem" placeholder="Escreva sua mensagem..." rows="6"></textarea>
+<textarea class="form-control" id="mensagem" name="descricao" placeholder="Escreva sua mensagem..." rows="6" required></textarea>
 </div>
 <div class="d-flex flex-column flex-sm-row gap-2">
 <button class="btn btn-warning fw-bold px-4" type="submit">Enviar mensagem</button>
-<button class="btn btn-dark px-4" data-bs-target="#modalTrabalheConosco" data-bs-toggle="modal" type="button">Trabalhe Connosco</button>
+<a href="{{ url_for('listar') }}" class="btn btn-outline-dark px-4">Ver Mensagens</a>
 </div>
 </form>
+
 </div>
 </div>
 </div>
