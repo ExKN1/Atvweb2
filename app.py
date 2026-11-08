@@ -19,9 +19,14 @@ def get_db_connection():
     )
 
 @app.route('/')
-def index():
-    return redirect(url_for('cadastro'))
+def home():
+    return render_template('index.html')
 
+@app.route('/sobre')
+def sobre():
+    return render_template('sobre.html')
+
+@app.route('/contato')
 @app.route('/cadastro', methods=['GET', 'POST'])
 def cadastro():
     if request.method == 'POST':
