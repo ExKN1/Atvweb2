@@ -20,11 +20,7 @@ def get_db_connection():
 
 @app.route('/')
 def home():
-    return render_template('index.html')
-
-@app.route('/sobre')
-def sobre():
-    return render_template('sobre.html')
+    return redirect(url_for('cadastro'))
 
 @app.route('/contato')
 @app.route('/cadastro', methods=['GET', 'POST'])
