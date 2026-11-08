@@ -8,11 +8,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark navbar-me bg-dark fixed-top">
             <div class="container">
-                <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="{{ url_for('home') }}">
+                <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="{{ url_for('cadastro') }}">
                     <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Logo Macacos Evoluídos" width="42" height="42">
                     MACACOS EVOLUÍDOS
                 </a>
@@ -21,20 +21,25 @@
                 </button>
                 <div class="collapse navbar-collapse" id="menuPrincipal">
                     <ul class="navbar-nav ms-auto align-items-lg-center">
-                        <li class="nav-item"><a class="nav-link {% if request.endpoint == 'home' %}active{% endif %}" href="{{ url_for('home') }}">Home</a></li>
-                        <li class="nav-item"><a class="nav-link {% if request.endpoint == 'sobre' %}active{% endif %}" href="{{ url_for('sobre') }}">Sobre</a></li>
-                        <li class="nav-item"><a class="nav-link {% if request.endpoint == 'contato' %}active{% endif %}" href="{{ url_for('contato') }}">Contato</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.endpoint == 'cadastro' %}active{% endif %}" href="{{ url_for('cadastro') }}">Contato / Enviar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.endpoint == 'listar' %}active{% endif %}" href="{{ url_for('listar') }}">Mensagens Recebidas</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    {% block content %}{% endblock %}
+    <div class="flex-grow-1 pt-5 mt-4">
+        {% block content %}{% endblock %}
+    </div>
 
-    <footer class="footer-dark py-4">
+    <footer class="footer-dark py-4 mt-auto">
         <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
-            <p class="mb-0">© 2026 Enzo Ramos de Almeida — Atividade 3.</p>
+            <p class="mb-0">© 2026 Enzo Ramos de Almeida — <strong>Atividade 4</strong>.</p>
             <p class="mb-0 text-secondary">Macacos Evoluídos • Valorant • LoL</p>
         </div>
     </footer>
