@@ -12,7 +12,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark navbar-me bg-dark fixed-top">
             <div class="container">
-                <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="{{ url_for('cadastro') }}">
+                <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="{{ url_for('home') }}">
                     <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Logo Macacos Evoluídos" width="42" height="42">
                     MACACOS EVOLUÍDOS
                 </a>
@@ -22,7 +22,13 @@
                 <div class="collapse navbar-collapse" id="menuPrincipal">
                     <ul class="navbar-nav ms-auto align-items-lg-center">
                         <li class="nav-item">
-                            <a class="nav-link {% if request.endpoint == 'cadastro' %}active{% endif %}" href="{{ url_for('cadastro') }}">Contato / Enviar</a>
+                            <a class="nav-link {% if request.endpoint == 'home' %}active{% endif %}" href="{{ url_for('home') }}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.endpoint == 'sobre' %}active{% endif %}" href="{{ url_for('sobre') }}">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.endpoint in ['contato', 'cadastro'] %}active{% endif %}" href="{{ url_for('contato') }}">Contato</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {% if request.endpoint == 'listar' %}active{% endif %}" href="{{ url_for('listar') }}">Mensagens Recebidas</a>
@@ -34,6 +40,18 @@
     </header>
 
     <div class="flex-grow-1 pt-5 mt-4">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="container pt-3">
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                            {{ message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
         {% block content %}{% endblock %}
     </div>
 
